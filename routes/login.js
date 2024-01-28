@@ -12,8 +12,8 @@ router.get('/login', (req, res, next) => {
 </head>
 
 <body>
-    <form action="/" method="POST" id="form">
-        <input type="text" name="username" id="un">
+    <form action="/" method="GET" id="form">
+        <input type="text" name="username" id="un" placeholder="Enter Username">
         </input>
         <br>
         <button id="btn" type="submit">Login</button>
@@ -24,8 +24,6 @@ router.get('/login', (req, res, next) => {
     const form = document.getElementById("form");
     const inp = document.getElementById("un");
     form.addEventListener('submit',(e)=>{
-        
-        console.log(inp.value)
         localStorage.setItem("username",inp.value)
     })
     
